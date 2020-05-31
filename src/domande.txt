@@ -1,0 +1,43 @@
+this.setState((state) => {
+
+                        let tasks = [...state.tasks];
+                        const newTask = new Task(
+                            data.id,
+                            task.description,
+                            task.important,
+                            task.private,
+                            task.date,
+                            task.project,
+                            0
+                        );
+                        tasks.push(newTask);
+                        return {tasks: tasks, mode: "view" };
+                    }, () => this.updateProjects())
+                    è giusto mettere this.updateProjects() in questo modo visto che setState è async?
+
+                    vedremo autenticazione?
+                    utilizzare id come parametro. pericoloso? p.e. un utente invia delete con id farlocco.
+
+                    non ho ben capito quando usare cors o il proxy.
+
+                    {this.state.mode === "view" ? null
+                : <MyVerticallyCenteredModal
+                    addOrEditTask={this.addOrEditTask}
+                    mode={this.state.mode}
+                    data={this.state.data}
+                    show={true}
+                    onHide={() => this.setState({ mode: "view" })} />
+            }
+                modo piu elegante?
+
+
+                css dentro component o globale?
+
+                tratteremo il deployment?
+
+                async / await;
+
+                https://react-bootstrap.github.io/components/forms/#forms-validation-native come si usa?
+
+                cors;
+
